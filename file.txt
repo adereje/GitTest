@@ -1,2 +1,3 @@
 Hello Bubba
 Abiel Dereje
+MAJOR: Computer Science
