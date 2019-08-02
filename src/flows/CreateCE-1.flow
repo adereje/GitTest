@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Create CE {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create CE</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>CreateCE</name>
+        <label>Create CE</label>
+        <locationX>532</locationX>
+        <locationY>46</locationY>
+        <inputAssignments>
+            <field>Class__c</field>
+            <value>
+                <elementReference>Class.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Student__c</field>
+            <value>
+                <elementReference>Student.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ClassEnrollment__c</object>
+    </recordCreates>
+    <startElementReference>CreateClass</startElementReference>
+    <subflows>
+        <name>CreateClass</name>
+        <label>Create Class</label>
+        <locationX>197</locationX>
+        <locationY>45</locationY>
+        <connector>
+            <targetReference>CreateStudent</targetReference>
+        </connector>
+        <flowName>CreateAClass</flowName>
+        <outputAssignments>
+            <assignToReference>Class</assignToReference>
+            <name>ClassId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <name>CreateStudent</name>
+        <label>Create Student</label>
+        <locationX>351</locationX>
+        <locationY>46</locationY>
+        <connector>
+            <targetReference>CreateCE</targetReference>
+        </connector>
+        <flowName>CreateAStudent</flowName>
+        <outputAssignments>
+            <assignToReference>Student</assignToReference>
+            <name>Student</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <name>Class</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Class__c</objectType>
+    </variables>
+    <variables>
+        <name>Student</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Student__c</objectType>
+    </variables>
+</Flow>

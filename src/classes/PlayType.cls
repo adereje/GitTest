@@ -1,0 +1,4 @@
+public enum PlayType 
+{
+	MUSICAL,COMEDY,DRAMA,NOTSELECTED
+}

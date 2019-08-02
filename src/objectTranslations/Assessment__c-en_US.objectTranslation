@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Assessment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Assessments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Information --></label>
+        <name>AdditionalInformation__c</name>
+        <picklistValues>
+            <masterLabel>Close Book</masterLabel>
+            <translation><!-- Close Book --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Class</masterLabel>
+            <translation><!-- In Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Book</masterLabel>
+            <translation><!-- Open Book --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single</masterLabel>
+            <translation><!-- Single --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Take Home</masterLabel>
+            <translation><!-- Take Home --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Average Grade --></label>
+        <name>AverageGrade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class --></label>
+        <name>Class__c</name>
+        <relationshipLabel><!-- Assessments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Max Grade --></label>
+        <name>MaxGrade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Grade --></label>
+        <name>MinGrade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Grades --></label>
+        <name>NumberOfGrades__c</name>
+    </fields>
+    <fields>
+        <label><!-- Re-Take --></label>
+        <name>ReTake__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Given --></label>
+        <name>TimeGiven__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Grade --></label>
+        <name>TotalGrade__c</name>
+    </fields>
+    <layouts>
+        <layout>Assessment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Homework Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Project Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quiz Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create New Grade For An Assessment --></label>
+        <name>CreateNewGradeForAnAssessment</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Homework --></label>
+        <name>Homework</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Project --></label>
+        <name>Project</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Quiz --></label>
+        <name>Quiz</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- AlertHello --></label>
+        <name>AlertHello</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- DisplayName --></label>
+        <name>DisplayName</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoToGoogle --></label>
+        <name>GoToGoogle</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dynamicChoiceSets>
+        <name>SubjectValues</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ClassSubject__c</picklistField>
+        <picklistObject>Class__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>Topic</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ClassTopic__c</picklistField>
+        <picklistObject>Class__c</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>Create A Class {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create A Class</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>CreateClassRecord</name>
+        <label>Create Class</label>
+        <locationX>421</locationX>
+        <locationY>44</locationY>
+        <assignRecordIdToReference>ClassId.Id</assignRecordIdToReference>
+        <inputAssignments>
+            <field>ClassSubject__c</field>
+            <value>
+                <elementReference>ClassSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ClassTopic__c</field>
+            <value>
+                <elementReference>Topic</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>ClassName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDate__c</field>
+            <value>
+                <elementReference>StartDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Class__c</object>
+    </recordCreates>
+    <screens>
+        <name>CreateClass</name>
+        <label>Create Class</label>
+        <locationX>253</locationX>
+        <locationY>46</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>CreateClassRecord</targetReference>
+        </connector>
+        <fields>
+            <name>ClassName</name>
+            <dataType>String</dataType>
+            <fieldText>Class Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>StartDate</name>
+            <dataType>Date</dataType>
+            <fieldText>Start Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>ClassSubject</name>
+            <choiceReferences>SubjectValues</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Class Subject</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>ClassTopic</name>
+            <choiceReferences>Topic</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Class Topic</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+    </screens>
+    <startElementReference>CreateClass</startElementReference>
+    <variables>
+        <name>ClassId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Class__c</objectType>
+    </variables>
+</Flow>
